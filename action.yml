@@ -1,0 +1,15 @@
+name: 'Resolve Outdated Comments'
+description: To keep pull requests free of flooded comments, automatically resolve or remove `outdated` comments from a specified user/bot
+inputs:
+  token:
+    description: Github Access Token
+    required: true
+  filter-user:
+    description: Specifiy github user to be checked
+    required: false
+  mode:
+    description: Available mode 'delete' or 'resolve'. By default is 'resolve'
+    required: false
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

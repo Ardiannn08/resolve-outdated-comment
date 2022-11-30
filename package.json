@@ -1,0 +1,27 @@
+{
+  "name": "ardian",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build src/index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ardiannn08/resolve-outdated-comment.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ardiannn08/resolve-outdated-comment/issues"
+  },
+  "homepage": "https://github.com/Ardiannn08/resolve-outdated-comment#readme",
+  "devDependencies": {
+    "@vercel/ncc": "^0.34.0"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}
