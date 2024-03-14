@@ -10,6 +10,12 @@ async function run() {
   const filteredEdges = edges.filter((edge) => {
     const noOtherAuthorComments = edge.node.comments.edges.length == 1;
     const oudatedAndNeedToResolve = edge.node.isOutdated && !edge.node.isResolved
+
+    // no need to filterUser if not specify
+    if (filterUser === '') {
+      return noOtherAuthorComments && oudatedAndNeedToResolve;
+    }
+
     return edge.node.comments.edges[0].node.author.login == filterUser && noOtherAuthorComments && oudatedAndNeedToResolve;
   });
 
