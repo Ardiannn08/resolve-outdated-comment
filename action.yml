@@ -5,7 +5,7 @@ inputs:
     description: Github Access Token
     required: true
   filter-user:
-    description: Specifiy github user to be checked
+    description: Specifiy github user to be checked. Leaving it empty means all user will be applied.
     required: false
   mode:
     description: Available mode 'delete' or 'resolve'. By default is 'resolve'
