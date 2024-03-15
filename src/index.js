@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const accessToken = core.getInput('token');
 const octokit = github.getOctokit(accessToken);
-const filterUser = core.getInput('filter-user');;
+const filterUser = core.getInput('filter-user');
 const mode = core.getInput('mode') || 'resolve';
 
 async function run() {
@@ -10,6 +10,8 @@ async function run() {
   const filteredEdges = edges.filter((edge) => {
     const noOtherAuthorComments = edge.node.comments.edges.length == 1;
     const oudatedAndNeedToResolve = edge.node.isOutdated && !edge.node.isResolved
+
+    console.log(filterUser);
 
     // no need to filterUser if not specify
     if (filterUser === '') {
