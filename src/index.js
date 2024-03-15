@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const accessToken = core.getInput('token');
 const octokit = github.getOctokit(accessToken);
-const filterUser = core.getInput('filter-user');;
+const filterUser = core.getInput('filter-user');
 const mode = core.getInput('mode') || 'resolve';
 
 async function run() {
@@ -16,7 +16,7 @@ async function run() {
       return noOtherAuthorComments && oudatedAndNeedToResolve;
     }
 
-    return edge.node.comments.edges[0].node.author.login == filterUser && noOtherAuthorComments && oudatedAndNeedToResolve;
+    return filterUser.split(',').includes(edge.node.comments.edges[0].node.author.login) == filterUser && noOtherAuthorComments && oudatedAndNeedToResolve;
   });
 
   for (const edge of filteredEdges) {
