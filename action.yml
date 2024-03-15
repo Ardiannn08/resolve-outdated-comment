@@ -5,11 +5,11 @@ inputs:
     description: Github Access Token
     required: true
   filter-user:
-    description: Specifiy github user to be checked. Leaving it empty means all user will be applied.
+    description: Specifiy github user to be checked. Leaving it empty means all user will be applied. Support multiple user separated by `,`
     required: false
   mode:
     description: Available mode 'delete' or 'resolve'. By default is 'resolve'
     required: false
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'

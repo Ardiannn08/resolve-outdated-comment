@@ -13,7 +13,7 @@ but it aims to produce the most frictionless experience possible considering tec
 
 # Parameter
 - **token**: GitHub Personal Access Token.
-- **[Optional] filter-user**: Specify the checked bot user. Leaving it empty means all user will be applied.
+- **[Optional] filter-user**: Specify the checked bot user. Leaving it empty means all user will be applied. (Support multiple user separated by `,`)
 - **mode**: `delete` / `resolve`
   - *delete*: remove an `oudated` comment completely.
   - *resolve*: resolve the conversation of `outdated` comment.
