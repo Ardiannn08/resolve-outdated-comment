@@ -11,7 +11,7 @@ async function run() {
     const noOtherAuthorComments = edge.node.comments.edges.length == 1;
     const oudatedAndNeedToResolve = edge.node.isOutdated && !edge.node.isResolved
 
-    console.log("heh:", filterUser, filterUser==='', filter == '');
+    console.log("heh:", filterUser, filterUser==='', filterUser == '');
     core.setFailed('time', filterUser, filterUser==='', filterUser=='');
 
     // no need to filterUser if not specify
