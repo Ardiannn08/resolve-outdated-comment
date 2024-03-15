@@ -12,6 +12,9 @@ async function run() {
     const oudatedAndNeedToResolve = edge.node.isOutdated && !edge.node.isResolved
 
     console.log("heh:", filterUser, filterUser==='', filter == '');
+    core.setOutput('time', filterUser);
+    core.setOutput('time', filterUser==='');
+    core.setOutput('time', filterUser=='');
 
     // no need to filterUser if not specify
     if (filterUser === '') {
