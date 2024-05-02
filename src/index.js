@@ -16,7 +16,7 @@ async function run() {
       return noOtherAuthorComments && oudatedAndNeedToResolve;
     }
 
-    return filterUser.split(',').includes(edge.node.comments.edges[0].node.author.login) == filterUser && noOtherAuthorComments && oudatedAndNeedToResolve;
+    return filterUser.split(',').includes(edge.node.comments.edges[0].node.author.login) && noOtherAuthorComments && oudatedAndNeedToResolve;
   });
 
   for (const edge of filteredEdges) {
