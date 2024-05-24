@@ -28,7 +28,7 @@ jobs:
     name: "Auto Resolve Comment"
     runs-on: ubuntu-latest
     steps:
-      - uses: Ardiannn08/resolve-outdated-comment@v1.1
+      - uses: Ardiannn08/resolve-outdated-comment@v1.3
         with:
           token: ${{ secrets.GH_TOKEN }}
           filter-user: "your-bot-name"
